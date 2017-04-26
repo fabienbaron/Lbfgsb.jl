@@ -1,7 +1,6 @@
 # Lbfgsb.jl
-
-[![Build Status](https://travis-ci.org/yuhonglin/Lbfgsb.jl.png?branch=master)](https://travis-ci.org/yuhonglin/Lbfgsb.jl)
-
+Original port by yuhonglin.
+This version fixes some compilation issues.
 
 This is wrapper of the famous [lbfgsb fortran library] of Julia language inspired by [this wrapper]
 
@@ -22,7 +21,7 @@ Currently only for Linux with ```gfortran``` installed
 I am new to Julia language so the code will be cleaned gradually
 
 ## usage
-  - First, run ```Pkg.clone("https://github.com/yuhonglin/Lbfgsb.jl")```, then run ```Pkg.build("Lbfgsb")```
+  - First, run ```Pkg.clone("https://github.com/fabienbaron/Lbfgsb.jl")```, then run ```Pkg.build("Lbfgsb")```
   - Currently only provide a function called ```lbfgsb```, see its option below,
 
 # Options
@@ -43,11 +42,10 @@ I am new to Julia language so the code will be cleaned gradually
 
   - Other parameters : see the paper above for reference (mostly does not need to modify)
   - ```iprint``` : printing level of the fortran routine, set to ```-1``` if you does not want to print anything
-  
+
 License
 ----
 BSD-3
 
 [lbfgsb fortran library]:http://users.iems.northwestern.edu/~nocedal/lbfgsb.html
 [this wrapper]:http://hannes.nickisch.org/code/glm-ie/pls/lbfgsb/README.html
-
