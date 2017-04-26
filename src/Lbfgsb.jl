@@ -13,7 +13,7 @@ macro callLBFGS(cmd)
             end
         end
 
-        ccall((:setulb_, "/home/baron/.julia/v0.5/Lbfgsb/deps/usr/lib/liblbfgsbf.so"),
+        ccall((:setulb_, string(homedir(),".julia/v0.5/Lbfgsb/deps/usr/lib/liblbfgsbf.so")),
               Void,
               (Ptr{Int32},
                Ptr{Int32},
