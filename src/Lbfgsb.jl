@@ -1,6 +1,5 @@
 module Lbfgsb
 
-
 # package code goes here
 macro callLBFGS(cmd)
     quote
@@ -12,8 +11,8 @@ macro callLBFGS(cmd)
                 task[i] = ' ';
             end
         end
-
-        ccall((:setulb_, string(homedir(),".julia/v0.5/Lbfgsb/deps/usr/lib/liblbfgsbf.so")),
+        liblocation=eval(string(homedir(),".julia/v0.5/Lbfgsb/deps/usr/lib/liblbfgsbf.so"))
+        ccall((:setulb_, liblocation),
               Void,
               (Ptr{Int32},
                Ptr{Int32},
